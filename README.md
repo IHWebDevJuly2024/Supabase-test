@@ -1,8 +1,15 @@
-# React + Vite
+# Supabase Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this class we tested supabase and its features. 
+Supabase is an open source Firebase alternative. It is a service that provides a Postgres database with a RESTful API instantly. It also provides authentication, real-time subscriptions, and storage.
 
-Currently, two official plugins are available:
+## Configuration
+Check the `supabase` folder to see the configuration of the database and the authentication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Environment Variables
+Remember to create a `.env` file with the following variables:
+```
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_KEY=your_supabase_key
+```
+
