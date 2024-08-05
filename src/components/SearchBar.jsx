@@ -11,7 +11,7 @@ function SearchBar({ getUsers, setUsers }) {
       return;
     }
     supabase
-      .from("users")
+      .from("characters")
       .select()
       .or(`name.ilike.${e.target.value}%`)
       .then((response) => setUsers(response.data))

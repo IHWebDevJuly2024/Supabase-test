@@ -10,7 +10,7 @@ function HomePage() {
 
   function getUsers() {
     supabase
-      .from("users")
+      .from("characters")
       .select()
       .then((response) => {
         console.log(response.data);
@@ -28,7 +28,7 @@ function HomePage() {
       <CreateUser getUsers={getUsers} />
       <SearchBar getUsers={getUsers} setUsers={setUsers} />
       <section className="users-container">
-        {users.map((user) => {
+        {users?.map((user) => {
           return <UserCard getUsers={getUsers} key={user.id} user={user} />;
         })}
       </section>

@@ -22,7 +22,7 @@ function CreateUser({ getUsers }) {
     };
 
     supabase
-      .from("users")
+      .from("characters")
       .insert(newUser)
       .then(() => {
         setName("");
