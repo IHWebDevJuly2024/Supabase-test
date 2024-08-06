@@ -1,8 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import supabase from "../supabase/config";
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const getSession = async () => {
+    try {
+      const session = await supabase.auth.getSession();
+
+      console.log(session.data.session.user.id);
+      if (session.data.session.expires_at > Date.now() / 1000) {
+        console.log("Logged in");
+      } else {
+        console.log("Not logged in");
+      }
+    } catch (error) {
+      console.log("Not logged in", error);
+    }
+  };
+
+  useEffect(() => {
+    getSession();
+  }, []);
+
   function handleLogin(e) {
     e.preventDefault();
     supabase.auth

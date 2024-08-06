@@ -5,16 +5,17 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 20rem;
-  height: 20rem;
+  height: 40rem;
   background-color: rgba(255, 255, 255, 0.281);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
   img {
     width: 100%;
     border-radius: 5px 5px 0 0;
-    height: 10rem;
+    height: 30rem;
     object-fit: cover;
     object-position: top;
+    border-bottom: 2px solid #ccc;
   }
 }
 
